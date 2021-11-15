@@ -1,0 +1,54 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scroll-snap-none {
+    scroll-snap-type: none;
+  }
+  .scroll-snap-x {
+    scroll-snap-type: x;
+  }
+  .scroll-snap-y {
+    scroll-snap-type: y;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* background-size: 400% 400%; */
+  /* animation: gradient 15s ease infinite; */
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: thin;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  @apply text-gray-900;
+}
+
+.redT {
+  color: red;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.animated {
+  @apply transform transition-all ease-in-out duration-300;
+}
+
+.layout {
+  @apply max-w-7xl min-h-full min-w-full  mx-auto bg-gradient-to-br from-indigo-600 via-pink-500 to-red-500;
+}
